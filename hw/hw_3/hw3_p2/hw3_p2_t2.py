@@ -1,21 +1,36 @@
-_month=float(input('Введіть номер місяця року: '))
-import math
-if _month-math.trunc(abs(_month))==0.0:
-    _month=int(_month)
-    if _month<=0 or _month>12:
-     print('Невірно введений номер місяця року.')
+# task 2
+
+while True:
+    month_number = int(input("Введіть номер місяця (1-12): "))
+
+    if month_number >= 1 and month_number <= 12:
+        break
     else:
-     if _month==1: print('Місяць року - січень')
-     if _month==2: print('Місяць року - лютий')
-     if _month==3: print('Місяць року - березень')
-     if _month==4: print('Місяць року - квітень')
-     if _month==5: print('Місяць року - травень')
-     if _month==6: print('Місяць року - червень')
-     if _month==7: print('Місяць року - липень')
-     if _month==8: print('Місяць року - серпень')
-     if _month==9: print('Місяць року - вересень')
-     if _month==10: print('Місяць року - жовтень')
-     if _month==11: print('Місяць року - листопад')
-     if _month==12: print('Місяць року - грудень')
-else: 
-    print('Невірно введений номер місяця року.')   
+        print("Неправильний номер місяця. Будь ласка, введіть число від 1 до 12.")
+
+if month_number == 1:
+    month_name = "січень"
+elif month_number == 2:
+    month_name = "лютий"
+elif month_number == 3:
+    month_name = "березень"
+elif month_number == 4:
+    month_name = "квітень"
+elif month_number == 5:
+    month_name = "травень"
+elif month_number == 6:
+    month_name = "червень"
+elif month_number == 7:
+    month_name = "липень"
+elif month_number == 8:
+    month_name = "серпень"
+elif month_number == 9:
+    month_name = "вересень"
+elif month_number == 10:
+    month_name = "жовтень"
+elif month_number == 11:
+    month_name = "листопад"
+elif month_number == 12:
+    month_name = "грудень"
+
+print(f"Місяць з номером {month_number} - це {month_name}.")

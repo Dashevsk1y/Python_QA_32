@@ -1,7 +1,10 @@
-a=float(input('Input any number: '))
-if a==0: 
-    print('Number is equal to zero.')
-elif a>0:
-     print('Number is positive.')
+# task 3
+
+number = float(input("Введіть число: "))
+
+if number > 0:
+    print("Number is positive")
+elif number < 0:
+    print("Number is negative")
 else:
-     print('Number is negative.')
+    print("Number is equal to zero")

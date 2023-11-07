@@ -1,16 +1,26 @@
-_day=float(input('Введіть номер дня тижня: '))
-import math
-if _day-math.trunc(abs(_day))==0.0:
-    _day=int(_day)
-    if _day<=0 or _day>7:
-     print('Невірно введений номер дня тижня ')
+# task 1
+
+while True:
+    day_number = int(input("Введіть номер дня неделі (1-7): "))
+
+    if day_number >= 1 and day_number <= 7:
+        break
     else:
-     if _day==1: print('День тижня - понеділок')
-     if _day==2: print('День тижня - вівторок')
-     if _day==3: print('День тижня - середа')
-     if _day==4: print('День тижня - четвер')
-     if _day==5: print('День тижня - пятниця')
-     if _day==6: print('День тижня - субота')
-     if _day==7: print('День тижня - неділя')
-else: 
-    print('Невірно введений номер дня тижня ')   
+        print("Неправильний номер дня. Будь ласка, введіть число від 1 до 7.")
+
+if day_number == 1:
+    day_name = "понеділок"
+elif day_number == 2:
+    day_name = "вівторок"
+elif day_number == 3:
+    day_name = "середа"
+elif day_number == 4:
+    day_name = "четверг"
+elif day_number == 5:
+    day_name = "п'ятниця"
+elif day_number == 6:
+    day_name = "субота"
+elif day_number == 7:
+    day_name = "неділя"
+
+print(f"День неділі з номером {day_number} - це {day_name}.")

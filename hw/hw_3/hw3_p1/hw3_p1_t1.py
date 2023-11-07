@@ -1,19 +1,25 @@
-print('Введіть 3 числа: ')
-a=float(input('Введіть перше число: '))
-b=float(input('Введіть друге число: '))
-c=float(input('Введіть третє число: '))
-import math
-print('Оберіть операцію:')
-print('1: обраховуємо суму трьох чисел')
-print('2: обраховуємо добуток трьох чисел')
-n=float(input())
-if n-math.trunc(abs(n))==0.0:
-    n=int(n)
-    if n==1:
-         print('Сума трьох чисел дорівнює ',str(round(a+b+c, 2)))
-    elif n==2:
-         print('Добуток трьох чисел дорівнює ',str(round(a*b*c,2)))
+# task 1
+
+num1 = float(input("Введіть перше число: "))
+num2 = float(input("Введіть друге число: "))
+num3 = float(input("Введіть третє число: "))
+
+while True:
+    print("Оберіть операцію:")
+    print("1. Сума")
+    print("2. Произведение")
+
+    choice = input("Введіть номер операції (1 або 2): ")
+
+    if choice == "1":
+        result = num1 + num2 + num3
+        print(f"Сума трьох чисел: {result}")
+        break
+    elif choice == "2":
+        result = num1 * num2 * num3
+        print(f"Произведение трьох чисел: {result}")
+        break
     else:
-         print('Ви ввели неправильну операцію')      
-else:
-     print('Ви ввели неправильну операцію') 
+        print(
+            "Неправильний вибір операції. Будь ласка, введіть 1 або 2 для вибору операції."
+        )

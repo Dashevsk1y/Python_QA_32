@@ -1,8 +1,12 @@
-a=float(input('Input first number: '))
-b=float(input('Input second number: '))
-if a==b: 
-    print('The number are equal to zero.')
-elif a>b:
-     print('The number are not  equal. '+str(b)+' '+str(a))
+# task 4
+
+num1 = float(input("Введіть перше число: "))
+num2 = float(input("Введіть друге число: "))
+
+if num1 == num2:
+    print("Числа рівні.")
 else:
-     print('The number are not  equal. '+str(a)+' '+str(b))
+    if num1 < num2:
+        print(f"Числа у порядку зростання: {num1}, {num2}")
+    else:
+        print(f"Числа у порядку зростання: {num2}, {num1}")
